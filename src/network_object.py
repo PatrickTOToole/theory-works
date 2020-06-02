@@ -4,7 +4,8 @@ def __init__():
 
 # An object to store the network
 class NetworkObject:
-    tree = []
+    nodes = []
+    synapses = []
     input_node_array = []
     output_node_array = []
     layers = []

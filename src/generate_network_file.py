@@ -10,9 +10,9 @@ def generate_network_file(network, name):
     name = str(name) + ".csv"
     gen = [network.input_num, network.output_num, network.depth]
     populate = []
-    for i in range(len(network.tree)):
-        for j in range(len(network.tree[i])):
-            populate.append(network.tree[i][j])
+    for i in range(len(network.nodes)):
+        for j in range(len(network.nodes[i])):
+            populate.append(network.nodes[i][j])
     with open(f'{name}', 'w', newline='') as output_file:
         writer = csv.writer(output_file, delimiter=' ',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)

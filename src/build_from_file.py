@@ -14,5 +14,5 @@ def build_from_file(filename):
         for row in reader:
             params.append(row)
     network = generate_network(params[0])
-    populate_tree(network.tree, params[1])
+    populate_tree(network.nodes, params[1])
     return network

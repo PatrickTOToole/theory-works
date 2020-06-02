@@ -18,5 +18,5 @@ def generate_network(input_num, output_num, depth):
         network.input_layers = input_num + depth
         network.output_layers = output_num + depth
     network.layers = propagate_layers(network)
-    network.tree = stitch_network(network)
+    stitch_network(network)
     return network;
