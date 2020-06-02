@@ -1,4 +1,4 @@
-from src import Node
+from src.Node import Node
 from src.propagate_layers import propagate_layers
 from src.stitch_network import stitch_network
 from src.network_object import NetworkObject

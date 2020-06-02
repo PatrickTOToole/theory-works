@@ -3,5 +3,5 @@ def __init__():
 
 
 # Populates the network with weights
-def populate_network(tree, weights):
+def populate_network(network, weights):
     return 0
