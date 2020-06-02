@@ -2,7 +2,8 @@ def __init__():
     print("")
 
 
-class BaseNode():
+# An object to store data for a singular node
+class BaseNode:
     weight = 1
     output_nodes = []
     input_nodes = []

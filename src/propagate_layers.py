@@ -5,6 +5,7 @@ def __init__():
     print("")
 
 
+# Creates layers for the network
 def propagate_layers(network):
     input_layers = network.input_layers
     output_layers = network.output_layers

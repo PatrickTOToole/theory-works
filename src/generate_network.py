@@ -5,6 +5,7 @@ def __init__():
     print("")
 
 
+# Generates and stitches unpopulated network
 def generate_network(input_num, output_num, depth):
     network = network_object()
     network.input_num = input_num

@@ -6,6 +6,7 @@ def __init__():
     print("")
 
 
+# Builds a network from a file
 def build_from_file(filename):
     params = []
     with open(f'{filename}', 'r', newline='') as script:

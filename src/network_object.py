@@ -2,6 +2,7 @@ def __init__():
     print("")
 
 
+# An object to store the network
 class NetworkObject:
     tree = []
     input_node_array = []

@@ -2,6 +2,7 @@ def __init__():
     print("")
 
 
+# Stitches network input and output
 def stitch_network(network):
     network.input_node_array
     network.output_node_array

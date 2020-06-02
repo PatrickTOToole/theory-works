@@ -5,6 +5,7 @@ def __init__():
     print("")
 
 
+# Creates a network file from an existing network
 def generate_network_file(network, name):
     name = str(name) + ".csv"
     gen = [network.input_num, network.output_num, network.depth]
