@@ -5,7 +5,7 @@ def __init__():
     print("")
 
 
-def generate_network_script(network, name):
+def generate_network_file(network, name):
     name = str(name) + ".csv"
     gen = [network.input_num, network.output_num, network.depth]
     populate = []

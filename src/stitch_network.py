@@ -2,5 +2,12 @@ def __init__():
     print("")
 
 
-def stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
+def stitch_network(network):
+    network.input_node_array
+    network.output_node_array
+    network.input_layers
+    network.output_layers
+    network.input_num
+    network.output_num
+    network.layers
     return 0;
