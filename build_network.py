@@ -17,10 +17,10 @@ def main(num_input, num_output, max_input, max_output, depth):
 
 
 def generate_tree(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
-    for i in range(len(input_node_array)):
-        propagate_input_node(input_node_array[i], input_layers, input_num, 0, layers)
+    propagate_layers(input_layers, output_layers, input_num, output_num, layers)
+    stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers)
 
-def propagate_input_node(input_node, input_layers, input_num, layer, layers):
+def stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
     print("")
 
 
