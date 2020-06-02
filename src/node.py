@@ -4,7 +4,7 @@ def __init__():
 
 # An object to store data for a singular node
 class BaseNode:
-    weight = 1
+    weight = 0
     output_nodes = []
     input_nodes = []
 

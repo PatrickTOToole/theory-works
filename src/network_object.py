@@ -11,3 +11,8 @@ class NetworkObject:
     input_num = 0
     output_num = 0
     depth = 0
+
+
+def stimulate_network(inputs):
+    output = ""
+    return output
