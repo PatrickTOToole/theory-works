@@ -23,8 +23,13 @@ while current_command != "quit":
             print("No current network")
         else:
             file = generate_network_file(current_network, "temp")
-
-
+    if current_command == "clear network":
+        current_network = None
+    if current_command == "build from file":
+        if current_network is not None:
+            print("Current network exists")
+        else:
+            current_network = build_from_file("temp.csv")
 
 
 

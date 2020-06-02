@@ -1,6 +1,7 @@
 import csv
 from src.Node import Node
 
+
 def __init__():
     print("")
 
@@ -15,8 +16,8 @@ def generate_network_file(network, name):
     for i in range(len(network.nodes)):
         for j in range(len(network.nodes[i])):
             populate.append(network.nodes[i][j].weight)
-    for i in range(len(network.input_node_array)):
-        populate.append(network.input_node_array[i].weight)
+    for i in range(len(network.output_node_array)):
+        populate.append(network.output_node_array[i].weight)
     with open(f'{name}', 'w', newline='') as output_file:
         writer = csv.writer(output_file, delimiter=' ',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
