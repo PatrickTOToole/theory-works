@@ -1,15 +1,21 @@
 import base_node
 import input_node
 import output_node
+import csv
 
 
 def main(argv):
+    current_tree = None
+    current_command = ""
     if argv[1] == "-f":
         if len(argv) > 3:
-            build_from_script(argv[2])
+            current_tree = build_from_script(argv[2])
     elif argv[1] == "-b":
         if len(argv) == 7:
-            generate_tree(argv[2:6])
+            current_tree = generate_tree(argv[2:6])
+
+    while current_command != "quit":
+        current_command = str(input("TWshell>"));
 
 
 def generate_tree(input_layers, output_layers, input_num, output_num, depth):
@@ -36,19 +42,25 @@ def stitch_network(input_node_array, output_node_array, input_layers, output_lay
 
 
 def build_from_script(filename):
-    script = open(filename, "r")
-    gen_params = []
-    populate_params = []
-    generate_tree(gen_params)
-    populate_tree(populate_params)
+    params = []
+    with open(f'{filename}', 'r', newline='') as script:
+        reader = csv.reader(script, delimiter=' ', quotechar='|')
+        for row in reader:
+            params.append(row)
+    length = len(params)-1
+    tree = generate_tree(params[:length-1])
+    tree = populate_tree(tree, params[length-1:length])
+    return tree
+
+# TODO Add learning functions
 
 
 def get_network_script():
     print("")
 
 
-def populate_tree(weights):
-    print("")
+def populate_tree(tree, weights):
+    return 0
 
 
 def propagate_layers(input_layers, output_layers, input_num, output_num, layers):
