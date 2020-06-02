@@ -1,6 +1,4 @@
-import base_node
-import input_node
-import output_node
+from src import base_node, input_node, output_node
 import csv
 
 
@@ -13,7 +11,7 @@ def main(argv):
     elif argv[1] == "-b":
         if len(argv) == 7:
             current_tree = generate_tree(argv[2:6])
-
+    print("Test")
     while current_command != "quit":
         current_command = str(input("TWshell>"));
 
