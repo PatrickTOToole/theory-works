@@ -1,5 +1,5 @@
 from src.generate_network import generate_network
-from src.populate_tree import populate_tree
+from src.populate_network import populate_network
 import csv
 
 
@@ -15,5 +15,5 @@ def build_from_file(filename):
         for row in reader:
             params.append(row)
     network = generate_network(params[0])
-    populate_tree(network.nodes, params[1])
+    populate_network(network.nodes, params[1])
     return network

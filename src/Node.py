@@ -17,9 +17,6 @@ class Node:
         for out_synapse in range(len(self.output_synapses)):
             self.output_synapses[out_synapse].push_buffer()
 
-    def btf_learn(self, weight_val, direction):
-        print("")
-
-    def ftb_learn(self, weight_val, direction):
-        print("")
+    def set_weight(self, weight):
+        self.weight = weight
 

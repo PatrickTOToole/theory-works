@@ -18,4 +18,5 @@ class Synapse:
     def push_buffer(self, data):
         self.buffer = data
 
-
+    def set_weight(self, weight):
+        self.weight = weight

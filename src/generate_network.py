@@ -20,6 +20,6 @@ def generate_network(input_num, output_num, depth):
         network.output_node_array.append(Node)
         network.input_layers = input_num + depth
         network.output_layers = output_num + depth
-    network.layers = propagate_layers(network)
+    network.nodes = propagate_layers(network)
     stitch_network(network)
     return network
