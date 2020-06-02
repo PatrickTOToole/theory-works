@@ -3,27 +3,36 @@ import input_node
 import output_node
 
 
-def main(num_input, num_output, max_input, max_output, depth):
+def main(argv):
+    if argv[1] == "-f":
+        if len(argv) > 3:
+            build_from_script(argv[2])
+    elif argv[1] == "-b":
+        if len(argv) == 7:
+            generate_tree(argv[2:6])
+
+
+def generate_tree(input_layers, output_layers, input_num, output_num, depth):
     input_node_array = []
     output_node_array = []
     layers = []
-    input_num = num_input
-    output_num = num_output
-    for i in range(num_input):
+    input_num = input_num
+    output_num = output_num
+    depth = depth
+    for i in range(input_num):
         input_node_array.append(input_node())
-    for i in range(num_output):
+    for i in range(output_num):
         output_node_array.append(output_node())
         input_layers = input_num + depth
-        output_later = output_num + depth
-
-
-def generate_tree(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
-    propagate_layers(input_layers, output_layers, input_num, output_num, layers)
-    stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers)
+        output_layers = output_num + depth
+    layers = propagate_layers(input_layers, output_layers, input_num, output_num, layers)
+    params = [input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers]
+    tree = stitch_network(params)
+    return tree;
 
 
 def stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
-    print("")
+    return 0;
 
 
 def build_from_script():
@@ -41,6 +50,7 @@ def propagate_layers(input_layers, output_layers, input_num, output_num, layers)
     propagate_layers_auxiliary(input_num, input_layers, total_layers, layers, 0)
     layers[input_layers + 1].append([base_node])
     propagate_layers_auxiliary(output_num, output_layers, total_layers, layers, 1)
+    return layers
 
 
 def propagate_layers_auxiliary(num, num_layers, total_layers, layers, mode):
