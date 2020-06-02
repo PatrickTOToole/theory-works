@@ -1,5 +1,6 @@
 class OutputNode():
     weight = 1
+    input = []
     output = []
 
     def process(input_val):
