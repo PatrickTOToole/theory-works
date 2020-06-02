@@ -1,3 +1,7 @@
+def __init__():
+    print("")
+
+
 class OutputNode():
     weight = 1
     input = []

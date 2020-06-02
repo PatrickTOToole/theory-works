@@ -1,3 +1,7 @@
+def __init__():
+    print("")
+
+
 class BaseNode():
     weight = 1
     output_nodes = []
