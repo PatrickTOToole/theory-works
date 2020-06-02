@@ -35,11 +35,19 @@ def stitch_network(input_node_array, output_node_array, input_layers, output_lay
     return 0;
 
 
-def build_from_script():
-    print("")
+def build_from_script(filename):
+    script = open(filename, "r")
+    gen_params = []
+    populate_params = []
+    generate_tree(gen_params)
+    populate_tree(populate_params)
 
 
 def get_network_script():
+    print("")
+
+
+def populate_tree(weights):
     print("")
 
 
