@@ -1,4 +1,5 @@
-from src import generate_network, populate_tree
+from src.generate_network import generate_network
+from src.populate_tree import populate_tree
 import csv
 
 

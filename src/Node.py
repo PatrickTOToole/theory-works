@@ -1,12 +1,9 @@
-from src import Synapse
-
-
 def __init__():
     print("")
 
 
 # An object to store data for a singular node
-class BaseNode:
+class Node:
     weight = 0
     output_synapses = []
     input_synapses = []

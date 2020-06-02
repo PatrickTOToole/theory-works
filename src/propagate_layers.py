@@ -1,4 +1,4 @@
-from src import node
+from src import Node
 
 
 def __init__():
@@ -16,7 +16,7 @@ def propagate_layers(network):
     for i in range(total_layers + 1):
         layers.append([])
     propagate_layers_auxiliary(input_num, input_layers, total_layers, layers, 0)
-    layers[input_layers + 1].append([node()])
+    layers[input_layers + 1].append([Node])
     propagate_layers_auxiliary(output_num, output_layers, total_layers, layers, 1)
     return layers
 
@@ -32,20 +32,20 @@ def propagate_layers_auxiliary(num, num_layers, total_layers, layers, mode):
                 continue
             if num_layers > num:
                 if j < (num_layers - num):
-                    layers[x].append([node()])
-                    layers[x].append([node()])
+                    layers[x].append([Node])
+                    layers[x].append([Node])
                 elif j == 0:
-                    layers[x].append([node()])
+                    layers[x].append([Node])
                 else:
                     if i > j:
-                        layers[x].append([node()])
+                        layers[x].append([Node])
             elif num_layers < num:
                 if j > (num_layers - num):
-                    layers[x].append([node()])
+                    layers[x].append([Node])
                 elif j == 0:
-                    layers[x].append([node()])
+                    layers[x].append([Node])
                 else:
                     continue
             else:
                 if i > j:
-                    layers[x].append([node()])
+                    layers[x].append([Node])

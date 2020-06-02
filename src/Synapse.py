@@ -1,4 +1,4 @@
-from src import node
+from src import Node
 
 
 def __init__():
