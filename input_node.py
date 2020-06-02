@@ -2,7 +2,7 @@ class InputNode():
     weight = 1
     output = []
 
-    def output(input_val):
+    def process(input_val):
         print("")
     def btf_learn(weight, direction):
         print("")

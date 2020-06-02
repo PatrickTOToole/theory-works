@@ -21,7 +21,16 @@ def generate_tree(input_node_array, output_node_array, input_layers, output_laye
     propagate_layers(input_layers, output_layers, input_num, output_num, layers)
     stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers)
 
+
 def stitch_network(input_node_array, output_node_array, input_layers, output_layers, input_num, output_num, layers):
+    print("")
+
+
+def build_from_script():
+    print("")
+
+
+def get_network_script():
     print("")
 
 
@@ -32,6 +41,7 @@ def propagate_layers(input_layers, output_layers, input_num, output_num, layers)
     propagate_layers_auxiliary(input_num, input_layers, total_layers, layers, 0)
     layers[input_layers + 1].append([base_node])
     propagate_layers_auxiliary(output_num, output_layers, total_layers, layers, 1)
+
 
 def propagate_layers_auxiliary(num, num_layers, total_layers, layers, mode):
     for i in range(num):

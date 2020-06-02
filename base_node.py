@@ -3,9 +3,11 @@ class BaseNode():
     output = []
     layer = -1
 
-    def output(input_val):
+    def process(input_val):
         print("")
+
     def btf_learn(weight, direction):
         print("")
+
     def ftb_learn(weight, direction):
         print("")
