@@ -38,3 +38,14 @@ def propagate_layers(input_layers, output_layers, input_num, output_num, layers)
                     layers[j].append([base_node()])
                 elif j == 0:
                     layers[j].append([base_node()])
+    layers[input_layers + 1].append([base_node])
+    for i in range(output_num):
+        for j in range(output_layers):
+            if j == 0:
+                continue
+            if output_layers > output_num:
+                if j < (output_layers - output_num):
+                    layers[total_layers - j].append([base_node()])
+                    layers[total_layers - j].append([base_node()])
+                elif j == 0:
+                    layers[total_layers - j].append([base_node()])
