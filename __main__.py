@@ -1,4 +1,4 @@
-from src import build_from_file, generate_tree
+from src import build_from_file, generate_network
 import sys
 
 argv = sys.argv
@@ -10,7 +10,7 @@ if len(argv) > 1 and argv[1] == "-f":
         current_tree = build_from_file(argv[2])
 elif len(argv) > 1 and argv[1] == "-b":
     if len(argv) == 7:
-        current_tree = generate_tree(argv[2:6])
+        current_tree = generate_network(argv[2:6])
 while current_command != "quit":
     current_command = str(input("TWshell>"));
 
