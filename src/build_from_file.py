@@ -14,9 +14,10 @@ def build_from_file(filename):
         reader = csv.reader(script, delimiter=' ', quotechar='|')
         for row in reader:
             params.append(row)
-    for i in range(len(params)):
-        for j in range(len(params[i])):
-            params[i][j] = float(params[i][j])
-    network = generate_network(params = params[0])
-    populate_network(params = [network, params[1]])
+    for i in range(len(params[0])):
+        params[0][i] = int(params[0][i])
+    for i in range(len(params[1])):
+        params[1][i] = float(params[1][i])
+    network = generate_network(params[0][0], params[0][1], params[0][2])
+    populate_network(network, params[1])
     return network

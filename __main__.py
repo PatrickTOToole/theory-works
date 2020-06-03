@@ -18,19 +18,24 @@ while current_command != "quit":
     current_command = str(input("TWshell>"));
     if current_command == "build new":
         current_network = generate_network(3, 3, 2)
-    if current_command == "save network":
+        print("Network built")
+    elif current_command == "save network":
         if current_network is None:
             print("No current network")
         else:
             file = generate_network_file(current_network, "temp")
-    if current_command == "clear network":
+            print("Network saved")
+    elif current_command == "clear network":
         current_network = None
-    if current_command == "build from file":
+        print("Network cleared")
+    elif current_command == "build from file":
         if current_network is not None:
             print("Current network exists")
         else:
             current_network = build_from_file("temp.csv")
 
+    else:
+        print("Invalid Command")
 
 
 
