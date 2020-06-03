@@ -17,8 +17,6 @@ def generate_network(input_num, output_num, depth):
     network.input_layers = input_num + depth
     network.output_layers = output_num + depth
     network = propagate_layers(network)
-    print(f"First layer {network.nodes[0]}")
-    print(f"Second layer {network.nodes[1]}")
     network = stitch_network(network)
 
     return network

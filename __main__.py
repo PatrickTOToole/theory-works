@@ -33,14 +33,7 @@ while True:
             print("Current network exists")
         else:
             current_network = build_from_file("temp.csv")
-    if current_command == "quit":
+    elif current_command == "quit":
         sys.exit(1)
     else:
         print("Invalid Command")
-
-
-
-
-
-
-

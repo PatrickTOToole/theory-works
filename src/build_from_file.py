@@ -19,9 +19,8 @@ def build_from_file(filename):
         params[0][i] = int(params[0][i])
     for i in range(len(params[1])):
         params[1][i] = float(params[1][i])
-        for i in range(len(params[2])):
-            params[2][i] = float(params[2][i])
+    for i in range(len(params[2])):
+        params[2][i] = float(params[2][i])
     network = generate_network(params[0][0], params[0][1], params[0][2])
-    network = stitch_network(network)
     populate_network(network, params[1], params[2])
     return network
