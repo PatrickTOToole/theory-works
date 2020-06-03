@@ -6,7 +6,7 @@ def __init__():
 
 
 class Synapse:
-    weight = 0
+    weight = 0.5
     buffer = 0
 
     def pull_buffer(self):

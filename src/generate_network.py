@@ -22,4 +22,5 @@ def generate_network(input_num, output_num, depth):
         network.output_layers = output_num + depth
     network.nodes = propagate_layers(network)
     stitch_network(network)
+    print(f"First node synapses {network.nodes[1][1].output_synapses}")
     return network

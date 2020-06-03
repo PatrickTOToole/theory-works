@@ -16,16 +16,16 @@ def generate_network_file(network, name):
     for i in range(len(network.input_node_array)):
         node_weights.append(network.input_node_array[i].weight)
         for j in range(len(network.input_node_array[i].output_synapses)):
-            synapse_weights.append(network.input_node_array[i].output_synapses[j])
+            synapse_weights.append(network.input_node_array[i].output_synapses[j].weight)
     for i in range(len(network.nodes)):
         for j in range(len(network.nodes[i])):
             node_weights.append(network.nodes[i][j].weight)
-            for k in range(len(network.input_node_array[i][j].output_synapses)):
-                synapse_weights.append(network.nodes[i][j].output_synapses[k])
+            for k in range(len(network.nodes[i][j].output_synapses)):
+                synapse_weights.append(network.nodes[i][j].output_synapses[k].weight)
     for i in range(len(network.output_node_array)):
         node_weights.append(network.output_node_array[i].weight)
         for j in range(len(network.output_node_array[i].output_synapses)):
-            synapse_weights.append(network.output_node_array[i].output_synapses[j])
+            synapse_weights.append(network.output_node_array[i].output_synapses[j].weight)
     with open(f'{name}', 'w', newline='') as output_file:
         writer = csv.writer(output_file, delimiter=' ',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
