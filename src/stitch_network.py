@@ -10,7 +10,8 @@ def stitch_network(network):
     for layer_num in range(network.depth * 2 + 3):
         if layer_num == 0:
             for node_num in range(network.input_num):
-                for synapse_num in range(len(network.input_node_array[node_num].output_synapses)):
+                for synapse_num in range(len(network.nodes[0])):
+                    print("added synapse")
                     network.input_node_array[node_num].output_synapses.append(Synapse)
         elif layer_num == 1 and layer_num <= network.depth:
             for node_num in range(len(network.nodes[0])):

@@ -14,7 +14,7 @@ if len(argv) > 1 and argv[1] == "-f":
 elif len(argv) > 1 and argv[1] == "-b":
     if len(argv) == 7:
         current_network = generate_network(argv[2:6])
-while current_command != "quit":
+while True:
     current_command = str(input("TWshell>"));
     if current_command == "build new":
         current_network = generate_network(3, 3, 2)
@@ -33,7 +33,8 @@ while current_command != "quit":
             print("Current network exists")
         else:
             current_network = build_from_file("temp.csv")
-
+    if current_command == "quit":
+        sys.exit(1)
     else:
         print("Invalid Command")
 
