@@ -12,17 +12,22 @@ def propagate_layers(network):
     input_num = network.input_num
     output_num = network.output_num
     total_layers = output_layers + input_layers
-    for i in range(total_layers + 1):
-        network.nodes.append([])
+    # Generate input nodes
+    network.nodes.append([])
+    for i in range(network.input_num):
+        network.nodes[0].append(Node)
     propagate_layers_auxiliary(input_num, input_layers, total_layers, network.nodes, 0)
     network.nodes[input_layers + 1].append(Node)
     propagate_layers_auxiliary(output_num, output_layers, total_layers, network.nodes, 1)
+    for i in range(network.output_num):
+        network.nodes[i].append(Node)
     return network
 
 
 def propagate_layers_auxiliary(input_num, input_layers, total_layers, node_layers, mode):
     for i in range(input_num):
         for j in range(input_layers):
+            node_layers.append([])
             if mode == 0:
                 x = j
             else:
