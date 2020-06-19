@@ -1,6 +1,7 @@
 {
   "commands" : {
-    "build": "build_network",
-    "save": "save_network"
+    "build": ["build_network", 4],
+    "save": ["save_network", 3],
+    "quit": ["sys.exit(0)", 0]
   }
 }
