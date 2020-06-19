@@ -1,4 +1,4 @@
-from src.Synapse import Synapse
+from src.classes import Synapse
 
 
 def __init__():

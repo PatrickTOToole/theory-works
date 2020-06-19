@@ -20,3 +20,29 @@ class Node:
     def set_weight(self, weight):
         self.weight = weight
 
+
+class Synapse:
+    weight = 0.5
+    buffer = 0
+
+    def pull_buffer(self):
+        temp = self.buffer
+        self.buffer = 0
+        temp = temp * self.weight
+        return temp
+
+    def push_buffer(self, data):
+        self.buffer = data
+
+    def set_weight(self, weight):
+        self.weight = weight
+
+
+# An object to store the network
+class NetworkObject:
+    nodes = []
+    synapses = []
+    input_num = 0
+    output_num = 0
+    depth = 0
+
