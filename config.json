@@ -1,0 +1,6 @@
+{
+  "commands" : {
+    "build": "build_network",
+    "save": "save_network"
+  }
+}
